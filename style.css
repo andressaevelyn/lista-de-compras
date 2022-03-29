@@ -1,0 +1,63 @@
+html, body {
+    padding:0;
+    margin: 0;
+
+}
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(107,107,218,1) 58%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    width: 350px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 4px;
+}
+
+.input{
+    display: flex;
+}
+
+.input-group{
+    padding: 10px;
+}
+
+.input-group input{
+    margin-bottom: 5px;
+}
+
+.button-container{
+    display:flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.button-container button {
+    padding: 10px;
+    background: #087fbf;
+    color: #FFF;
+    border: none;
+}
+
+.content{
+    width: 100%;
+    height: 280px;
+}
+.item{
+    width:100%;
+    padding-left: 10px;
+    display: flex;
+}
+.item input[type=checkbox] {
+    transform: scale(1.5
+    );
+
+}
+
+.item span {
+    margin-left: 20px;
+}
