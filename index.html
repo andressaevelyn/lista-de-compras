@@ -4,17 +4,20 @@
         <meta charset="utf-8"/>
         <title> Lista de Compras</title>
         <link rel="stylesheet" href="style.css"/>
+        <script src="functions.js"></script>
     </head>
     <body>
         <div class="card">
             <div class="input">
-                <div class="input-group">
-                    <input placeholder="Insira o nome do produto" />
-                    <input placeholder="Quantidade"/>
-                    <input placeholder="Valor"/>
+                <div class="input-group">                     
+                    <input placeholder="Insira o nome do produto" onchange= "onChangeProductName (this)" />
+                    <input placeholder="Quantidade" onchange= "onChangeProductQuantity(this)"
+                 
+                    />
+                    <input placeholder="Valor" onchange="onChangeProductValue(this)"/>
                 </div>
                 <div class="button-container">
-                    <button>Adicionar</button>
+                    <button disabled>Adicionar</button>
                 </div>
             </div>
             <hr/>
