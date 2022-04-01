@@ -41,6 +41,7 @@ body{
     background: #087fbf;
     color: #FFF;
     border: none;
+    cursor: pointer; 
 }
 
 .button-container button:disabled {

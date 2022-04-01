@@ -10,25 +10,19 @@
         <div class="card">
             <div class="input">
                 <div class="input-group">                     
-                    <input placeholder="Insira o nome do produto" onchange= "onChangeProductName (this)" />
-                    <input placeholder="Quantidade" onchange= "onChangeProductQuantity(this)"
+                    <input id="name" placeholder="Insira o nome do produto" oninput= "onChangeProductName (this)" />
+                    <input id="quantity" placeholder="Quantidade" oninput= "onChangeProductQuantity(this)"
                  
                     />
-                    <input placeholder="Valor" onchange="onChangeProductValue(this)"/>
+                    <input id="value" placeholder="Valor" oninput="onChangeProductValue(this)"/>
                 </div>
                 <div class="button-container">
-                    <button disabled>Adicionar</button>
+                    <button onclick="insertRow()" disabled>Adicionar</button>
                 </div>
             </div>
             <hr/>
             <div class="content">
-                <div class="item">
-                    <input type="checkbox"/>
-                    <span>
-                        Frango Perdigão 3 x 10,00
-                    </span>
-                    
-                </div>
+                
             </div>
 
         </div>
