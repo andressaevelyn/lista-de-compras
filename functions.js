@@ -1,31 +1,44 @@
 let productName="";
 let productPrice="";
 let productQuantity="";
-
+let total = 0; 
 
 function clearAllFields() {
     document.querySelector('#name').value= "";
     document.querySelector('#quantity').value= "";
     document.querySelector('#value').value= "";
-
+    productName="";
+    productPrice=""
+    productQuantity="";
+    enableButton();
 }
+
+function onCheckoutProduct(productTotal, event) {
+    event.parentNode.style.display = "none";
+    total= total- productTotal;
+    document.querySelector('#totalValue').innerText=total;
+}
+
 function insertRow() {
+    const productTotal =Number(productQuantity.replace(",",".")) * Number (productPrice.replace(",","."))
+    total= total+ productTotal;
     const row= `
     <div class="item">
-                    <input type="checkbox"/>
+                    <input type="checkbox" onchange="onCheckoutProduct(${productTotal}, this)"/>
                     <span>
                         ${productName} ${productQuantity} x ${productPrice}
                     </span>
                     
                 </div>`;
-
     let currentHtml = document.querySelector('.content').innerHTML;
     document.querySelector('.content').innerHTML = currentHtml + row;
+    document.querySelector('#totalValue').innerText= total;
     clearAllFields();
 }
 
 function checkIfIsAValidNumber(event) {
-    if (event.value.trim()==="" || isNaN(event.value)===true) {
+    const value = event.value.trim().replace(",",".");
+    if (value==="" || isNaN(value)===true) {
         event.value = "";
          return false;
      }
